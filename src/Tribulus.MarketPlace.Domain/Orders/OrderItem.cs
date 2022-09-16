@@ -39,6 +39,7 @@ namespace Tribulus.MarketPlace.Orders
 
             Price = price;
             UpdateQuantity(quantity);
+            SubTotal = quantity * price;
         }
         public void UpdateQuantity(int quantity)
         {

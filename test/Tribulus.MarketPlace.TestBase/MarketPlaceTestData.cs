@@ -12,6 +12,12 @@ namespace Tribulus.MarketPlace
         public Guid UserAdminId { get; internal set; }
         public string UserAdminUserName { get; } = "admin";
 
+        public Guid Order1Id { get; } = Guid.NewGuid();
+        public string Order1Name { get; } = "Iphone Order";
+
+
+        public Guid OrderItem1Id { get; } = Guid.NewGuid();
+
         public Guid UserJohnId { get; } = Guid.NewGuid();
         public string UserJohnUserName { get; } = "john";
 

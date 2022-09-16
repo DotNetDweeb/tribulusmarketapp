@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Tribulus.MarketPlace.Products
 {
-    public  class Product_Tests : MarketPlaceDomainTestBase
+    public class Product_Tests : MarketPlaceDomainTestBase
     {
         private readonly MarketPlaceTestData _testData;
 
@@ -11,6 +11,7 @@ namespace Tribulus.MarketPlace.Products
         {
             _testData = GetRequiredService<MarketPlaceTestData>();
         }
+
         [Fact]
         public void Should_Not_Create_With_NullOrEmpty_Name()
         {
@@ -26,6 +27,8 @@ namespace Tribulus.MarketPlace.Products
                 );
             });
         }
+
+
         [Fact]
         public void Should_Not_Create_With_Name_LessThan_2_MoreThan_256_Chars()
         {
@@ -43,7 +46,10 @@ namespace Tribulus.MarketPlace.Products
                     5
                 );
             });
+        
         }
+
+
         [Fact]
         public void Should_Not_Create_With_Negative_StockCount()
         {
